@@ -10,6 +10,7 @@ import com.uberTecnologs.workshopmongo.domain.User;
 import com.uberTecnologs.workshopmongo.repository.UserRepository;
 
 @Configuration
+
 public class Instantiation implements CommandLineRunner{
 	
 	@Autowired
