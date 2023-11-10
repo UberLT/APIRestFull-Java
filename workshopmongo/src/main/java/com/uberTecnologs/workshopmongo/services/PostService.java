@@ -1,5 +1,6 @@
 package com.uberTecnologs.workshopmongo.services;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,5 +24,10 @@ public class PostService {
 	
 	public List<Post> findByTitle(String text){
 		return repo.findyByTitle(text);
+	}
+	
+	public List<Post> fullConsulta(String text, Date minDate, Date maxDate){
+		maxDate = new Date(maxDate.getTime() + 20*60*60*1000);
+		return repo.FullConsulta(text, minDate, maxDate);
 	}
 }
